@@ -4,7 +4,7 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS];
+    int *b = new int[NELEMENTS]; //Rossz valtozo nev a tomb elemszamaiban
     std::cout << '1-100 ertekek duplazasa' //Nincsen sortores
     for (int i = 0;) //Befejezetlen itaracio
     {
