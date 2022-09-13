@@ -4,23 +4,28 @@ constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; //Rossz valtozo nev a tomb elemszamaiban
-    std::cout << '1-100 ertekek duplazasa' //Nincsen sortores
-    for (int i = 0;) //Befejezetlen itaracio
+    int *b = new int[N_ELEMENTS];
+    std::cout << "1-100 ertekek duplazasa" << std::endl;
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        b[i] = i * 2; //Ez esetben 0-99-ig duplazza az ertekeket
+        b[i] = (i+1) * 2;
     }
-    for (int i = 0; i; i++) //Nincsen feltetel az iteracio kileptetesere
+	
+	std::cout << "Ertek:" << std::endl;
+	
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        std::cout << "Ertek:" //Nem iratunk ki ertekeket
+        if(i < (N_ELEMENTS-1)) std::cout << b[i] << ", ";
+        else std::cout << b[i] << std::endl;
     }    
     std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag; //Nincsen kezdo ertek
-    for (int i = 0; i < N_ELEMENTS, i++)
+    int atlag = 0;
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        atlag += b[i] //Pontosvesszo hianya
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
     return 0;
 }
+
